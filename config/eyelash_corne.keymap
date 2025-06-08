@@ -1,0 +1,236 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define HM_PRIOR_IDLE 150
+#define HM_TAPPING_TERM 280
+#define HM_QUICK_TAP 175
+#define KEYS_L_TOP  0  1  2  3  4  5
+#define KEYS_R_TOP  7  8  9 10 11 12
+#define KEYS_L_MID 13 14 15 16 17 18
+#define KEYS_R_MID 22 23 24 25 26 27
+#define KEYS_L_BTM 28 29 30 31 32 33
+#define KEYS_R_BTM 36 37 38 39 40 41
+#define KEYS_L_THUMB 42 43 44
+#define KEYS_R_THUMB 45 46 47
+#define KEYS_L KEYS_L_TOP KEYS_L_MID KEYS_L_BTM
+#define KEYS_R KEYS_R_TOP KEYS_R_MID KEYS_R_BTM
+#define KEYS_THUMBS KEYS_L_THUMB KEYS_R_THUMB
+
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/rgb.h>
+
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <100>;
+    delay-ms = <0>;
+};
+
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
+};
+
+/ {
+    behaviors {
+        hm_l: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <HM_QUICK_TAP>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R KEYS_THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        hm_r: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <HM_QUICK_TAP>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L KEYS_THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        morph_bt0: morph_bt0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_SEL 0 &bt BT_CLR>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_bt1: morph_bt1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&bt BT_SEL 1 &bt BT_CLR>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_bt2: morph_bt2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&bt BT_SEL 2 &bt BT_CLR>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_bt3: morph_bt3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&bt BT_SEL 3 &bt BT_CLR>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rgb_eff: morph_rgb_eff {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rgb_hui: morph_rgb_hui {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rgb_sai: morph_rgb_sai {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rgb_bri: morph_rgb_bri {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "QWERTY";
+            bindings = <
+&tog 1  &kp Q          &kp W         &kp E         &kp R          &kp T                         &kp UP                &kp Y      &kp U          &kp I         &kp O         &kp P             &none
+&none   &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hm_r RSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r RCTRL SEMI  &none
+&none   &kp Z          &kp X         &kp C         &kp V          &kp B      &none              &kp DOWN              &kp N      &kp M          &kp COMMA     &kp DOT       &kp FSLH          &none
+                                     &lt 7 ESC     &lt 6 SPACE    &lt 5 TAB                                           &lt 2 RET  &lt 3 BSPC     &lt 4 DEL
+            >;
+        };
+
+        colemak_layer {
+            display-name = "Cmk-DH";
+            bindings = <
+&trans  &kp Q          &kp W         &kp F         &kp P          &kp B                    &trans          &kp J   &kp L          &kp U         &kp Y         &kp SINGLE_QUOTE  &trans
+&trans  &hm_l LCTRL A  &hm_l LALT R  &hm_l LGUI S  &hm_l LSHFT T  &kp G            &trans  &trans  &trans  &kp M   &hm_r RSHFT N  &hm_r RGUI E  &hm_r LALT I  &hm_r RCTRL O     &trans
+&trans  &kp Z          &kp X         &kp C         &kp D          &kp V   &none            &trans          &kp K   &kp H          &kp COMMA     &kp DOT       &kp FSLH          &trans
+                                     &trans        &trans         &trans                                   &trans  &trans         &trans
+            >;
+        };
+
+        symbol_layer {
+            display-name = "Symbol";
+            bindings = <
+&trans  &kp LBRC   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC                    &trans          &none  &none      &none      &none     &none     &trans
+&trans  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS            &trans  &trans  &trans  &none  &sk RCTRL  &sk RSHFT  &sk LALT  &sk RGUI  &trans
+&trans  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE   &none            &trans          &none  &none      &none      &none     &none     &trans
+                             &kp GT     &kp RPAR   &kp UNDER                                   &none  &none      &none
+            >;
+        };
+
+        number_layer {
+            display-name = "Number";
+            bindings = <
+&trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT                    &trans          &none  &none      &none      &none     &none     &trans
+&trans  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL           &trans  &trans  &trans  &none  &sk RCTRL  &sk RSHFT  &sk LALT  &sk RGUI  &trans
+&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH   &none            &trans          &none  &none      &none      &none     &none     &trans
+                           &kp DOT  &kp N0  &kp MINUS                                   &none  &none      &none
+            >;
+        };
+
+        func_layer {
+            display-name = "Func";
+            bindings = <
+&trans  &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN                         &trans          &none  &none      &none      &none     &none     &trans
+&trans  &kp F11  &kp F4  &kp F5     &kp F6     &kp SLCK                  &trans  &trans  &trans  &none  &sk RCTRL  &sk RSHFT  &sk LALT  &sk RGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK  &none            &trans          &none  &none      &none      &none     &none     &trans
+                         &kp K_APP  &kp SPACE  &kp TAB                                           &none  &none      &none
+            >;
+        };
+
+        mouse_layer {
+            display-name = "Mouse";
+            bindings = <
+&trans  &none     &none     &none      &none      &none                   &trans          &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
+&trans  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL  &none           &trans  &trans  &trans  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&trans  &none     &none     &none      &none      &none  &none            &trans          &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                            &none      &none      &none                                   &mkp RCLK  &mkp LCLK       &mkp MCLK
+            >;
+        };
+
+        nav_layer {
+            display-name = "Nav";
+            bindings = <
+&trans  &none     &none     &none      &none      &none                   &trans          &kp LC(Y)     &kp LC(V)      &kp LC(C)       &kp LC(X)      &kp LC(Z)  &trans
+&trans  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL  &none           &trans  &trans  &trans  &kp CAPSLOCK  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &trans
+&trans  &none     &none     &none      &none      &none  &none            &trans          &kp INSERT    &kp HOME       &kp PAGE_DOWN   &kp PAGE_DOWN  &kp END    &trans
+                            &none      &none      &none                                   &kp RET       &kp BACKSPACE  &kp DELETE
+            >;
+        };
+
+        media_layer {
+            display-name = "Media";
+            bindings = <
+&trans  &none     &none     &none      &none      &none                   &trans          &rgb_ug RGB_TOG    &morph_rgb_eff  &morph_rgb_hui  &morph_rgb_sai  &morph_rgb_bri  &trans
+&trans  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL  &none           &trans  &trans  &trans  &ext_power EP_TOG  &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT      &trans
+&trans  &none     &none     &none      &none      &none  &none            &trans          &out OUT_TOG       &morph_bt0      &morph_bt1      &morph_bt2      &morph_bt3      &trans
+                            &none      &none      &none                                   &kp C_STOP         &kp C_PP        &kp C_MUTE
+            >;
+        };
+
+        system_layer {
+            display-name = "System";
+            bindings = <
+&none  &studio_unlock  &none  &none  &none  &bootloader                   &trans          &bootloader  &none  &none  &none  &studio_unlock  &none
+&none  &bt BT_CLR_ALL  &none  &none  &none  &sys_reset            &trans  &trans  &trans  &sys_reset   &none  &none  &none  &bt BT_CLR_ALL  &none
+&none  &none           &none  &none  &none  &none        &none            &trans          &none        &none  &none  &none  &none           &none
+                              &none  &none  &none                                         &none        &none  &none
+            >;
+        };
+
+        extra1 { status = "reserved"; };
+
+        extra2 { status = "reserved"; };
+    };
+
+    conditional_layers { compatible = "zmk,conditional-layers"; };
+};

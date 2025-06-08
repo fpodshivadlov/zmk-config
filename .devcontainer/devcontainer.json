@@ -1,0 +1,29 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "runArgs": ["--security-opt", "label=disable"],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "json.schemas": [
+                    {
+                        "fileMatch": [
+                            "*/devcontainer-feature.json"
+                        ],
+                        "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
+                    }
+                ]
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "nordic-semiconductor.nrf-devicetree",
+                "spadin.zmk-tools"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/kbrd-space/devcontainer-features/zmk:0": {
+            "zephyr_sdk_version": "0.16.9"
+        }
+    }
+}
