@@ -134,26 +134,42 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        system_left {
+            bindings = <&sl 8>;
+            key-positions = <0 28 13>;
+            layers = <0 1>;
+        };
+
+        system_right {
+            bindings = <&sl 8>;
+            key-positions = <12 27 41>;
+            layers = <0 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&tog 1  &kp Q          &kp W         &kp E         &kp R          &kp T                         &kp UP                &kp Y      &kp U          &kp I         &kp O         &kp P             &none
-&none   &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hm_r RSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r RCTRL SEMI  &none
-&none   &kp Z          &kp X         &kp C         &kp V          &kp B      &none              &kp DOWN              &kp N      &kp M          &kp COMMA     &kp DOT       &kp FSLH          &none
-                                     &lt 7 ESC     &lt 6 SPACE    &lt 5 TAB                                           &lt 2 RET  &lt 3 BSPC     &lt 4 DEL
+&kp LS(LC(LA(N1)))  &kp Q         &kp W         &kp E          &kp R          &kp T                         &kp UP                &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LS(LC(LA(N2)))
+&kp LS(LC(LA(N3)))  &hm_l LGUI A  &hm_l LALT S  &hm_l LSHFT D  &hm_l LCTRL F  &kp G               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hm_r RCTRL J  &hm_r RSHFT K  &hm_r LALT L  &hm_r RGUI SEMI  &kp LS(LC(LA(N4)))
+&kp LS(LC(LA(N5)))  &kp Z         &kp X         &kp C          &kp V          &kp B      &none              &kp DOWN              &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp LS(LC(LA(N6)))
+                                                &lt 7 ESC      &lt 6 SPACE    &lt 5 TAB                                           &lt 2 RET  &lt 3 BSPC     &lt 4 DEL
             >;
         };
 
         colemak_layer {
             display-name = "Cmk-DH";
             bindings = <
-&trans  &kp Q          &kp W         &kp F         &kp P          &kp B                    &trans          &kp J   &kp L          &kp U         &kp Y         &kp SINGLE_QUOTE  &trans
-&trans  &hm_l LCTRL A  &hm_l LALT R  &hm_l LGUI S  &hm_l LSHFT T  &kp G            &trans  &trans  &trans  &kp M   &hm_r RSHFT N  &hm_r RGUI E  &hm_r LALT I  &hm_r RCTRL O     &trans
-&trans  &kp Z          &kp X         &kp C         &kp D          &kp V   &none            &trans          &kp K   &kp H          &kp COMMA     &kp DOT       &kp FSLH          &trans
-                                     &trans        &trans         &trans                                   &trans  &trans         &trans
+&trans  &kp Q         &kp W         &kp F          &kp P          &kp B                    &trans          &kp J   &kp L          &kp U          &kp Y         &kp SINGLE_QUOTE  &trans
+&trans  &hm_l LGUI A  &hm_l LALT R  &hm_l LSHFT S  &hm_l LCTRL T  &kp G            &trans  &trans  &trans  &kp M   &hm_r RCTRL N  &hm_r RSHFT E  &hm_r LALT I  &hm_r RGUI O      &trans
+&trans  &kp Z         &kp X         &kp C          &kp D          &kp V   &none            &trans          &kp K   &kp H          &kp COMMA      &kp DOT       &kp FSLH          &trans
+                                    &trans         &trans         &trans                                   &trans  &trans         &trans
             >;
         };
 
@@ -220,10 +236,10 @@
         system_layer {
             display-name = "System";
             bindings = <
-&none  &studio_unlock  &none  &none  &none  &bootloader                   &trans          &bootloader  &none  &none  &none  &studio_unlock  &none
-&none  &bt BT_CLR_ALL  &none  &none  &none  &sys_reset            &trans  &trans  &trans  &sys_reset   &none  &none  &none  &bt BT_CLR_ALL  &none
-&none  &none           &none  &none  &none  &none        &none            &trans          &none        &none  &none  &none  &none           &none
-                              &none  &none  &none                                         &none        &none  &none
+&none  &tog 1  &none  &studio_unlock  &none  &bootloader                  &none         &bootloader  &none  &studio_unlock  &none  &tog 1  &none
+&none  &none   &none  &bt BT_CLR_ALL  &none  &sys_reset            &none  &none  &none  &sys_reset   &none  &bt BT_CLR_ALL  &none  &none   &none
+&none  &none   &none  &none           &none  &none        &none           &none         &none        &none  &none           &none  &none   &none
+                      &none           &none  &none                                      &none        &none  &none
             >;
         };
 
