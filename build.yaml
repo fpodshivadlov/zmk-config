@@ -8,5 +8,8 @@ include:
       -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: eyelash_corne_right
     shield: nice_view
+  # - board: eyelash_corne_left
+  #   shield: nice_view
+  #   snippet: zmk-usb-logging
   - board: eyelash_corne_left
     shield: settings_reset

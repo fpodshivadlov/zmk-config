@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: kbrd-space
+      url-base: https://github.com/kbrd-space
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
+    - name: zmk-anti-idle
+      remote: kbrd-space
+      revision: wip
   self:
     path: config
