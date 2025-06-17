@@ -156,19 +156,19 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp LS(LC(LA(N1)))  &kp Q         &kp W         &kp E          &kp R          &kp T                         &kp UP                &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LS(LC(LA(N2)))
-&kp LS(LC(LA(N3)))  &hm_l LGUI A  &hm_l LALT S  &hm_l LSHFT D  &hm_l LCTRL F  &kp G               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hm_r RCTRL J  &hm_r RSHFT K  &hm_r LALT L  &hm_r RGUI SEMI  &kp LS(LC(LA(N4)))
-&kp LS(LC(LA(N5)))  &kp Z         &kp X         &kp C          &kp V          &kp B      &none              &kp DOWN              &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp LS(LC(LA(N6)))
+&kp LS(LC(LA(N1)))  &kp Q         &kp W         &kp E          &kp R          &kp T                         &kp UP                &kp Y      &kp U          &kp I          &kp O         &kp P           &kp LS(LC(LA(N2)))
+&kp LS(LC(LA(N3)))  &hm_l LGUI A  &hm_l LALT S  &hm_l LSHFT D  &hm_l LCTRL F  &kp G               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hm_r RCTRL J  &hm_r RSHFT K  &hm_r LALT L  &hm_r RGUI SQT  &kp LS(LC(LA(N4)))
+&kp LS(LC(LA(N5)))  &kp Z         &kp X         &kp C          &kp V          &kp B      &none              &kp DOWN              &kp N      &kp M          &kp COMMA      &kp DOT       &kp SLASH       &kp LS(LC(LA(N6)))
                                                 &lt 7 ESC      &lt 6 SPACE    &lt 5 TAB                                           &lt 2 RET  &lt 3 BSPC     &lt 4 DEL
             >;
         };
 
-        colemak_layer {
+        cmkdh_layer {
             display-name = "Cmk-DH";
             bindings = <
-&trans  &kp Q         &kp W         &kp F          &kp P          &kp B                    &trans          &kp J   &kp L          &kp U          &kp Y         &kp SINGLE_QUOTE  &trans
-&trans  &hm_l LGUI A  &hm_l LALT R  &hm_l LSHFT S  &hm_l LCTRL T  &kp G            &trans  &trans  &trans  &kp M   &hm_r RCTRL N  &hm_r RSHFT E  &hm_r LALT I  &hm_r RGUI O      &trans
-&trans  &kp Z         &kp X         &kp C          &kp D          &kp V   &none            &trans          &kp K   &kp H          &kp COMMA      &kp DOT       &kp FSLH          &trans
+&trans  &kp Q         &kp W         &kp F          &kp P          &kp B                    &trans          &kp J   &kp L          &kp U          &kp Y         &kp SQT       &trans
+&trans  &hm_l LGUI A  &hm_l LALT R  &hm_l LSHFT S  &hm_l LCTRL T  &kp G            &trans  &trans  &trans  &kp M   &hm_r RCTRL N  &hm_r RSHFT E  &hm_r LALT I  &hm_r RGUI O  &trans
+&trans  &kp Z         &kp X         &kp C          &kp D          &kp V   &none            &trans          &kp K   &kp H          &kp COMMA      &kp DOT       &kp SLASH     &trans
                                     &trans         &trans         &trans                                   &trans  &trans         &trans
             >;
         };
