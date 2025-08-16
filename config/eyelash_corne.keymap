@@ -1,8 +1,8 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
-#define HM_PRIOR_IDLE 150
-#define HM_TAPPING_TERM 280
-#define HM_QUICK_TAP 175
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1250
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define HT_PRIOR_IDLE 150
+#define HT_TAPPING_TERM 280
+#define HT_QUICK_TAP 175
 #define KEYS_L_TOP  0  1  2  3  4  5
 #define KEYS_R_TOP  7  8  9 10 11 12
 #define KEYS_L_MID 13 14 15 16 17 18
@@ -29,76 +29,89 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
+&mmv {
     acceleration-exponent = <1>;
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <1000>;
     delay-ms = <0>;
+    display-name = "Mouse Move";
 };
 
-&mmv {
-    time-to-max-speed-ms = <500>;
+&msc {
     acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
+    time-to-max-speed-ms = <2000>;
+    delay-ms = <0>;
+    display-name = "Mouse Scroll";
 };
 
 / {
     behaviors {
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <HT_PRIOR_IDLE>;
+            tapping-term-ms = <HT_TAPPING_TERM>;
+            quick-tap-ms = <HT_QUICK_TAP>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
+
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <HM_QUICK_TAP>;
+            require-prior-idle-ms = <HT_PRIOR_IDLE>;
+            tapping-term-ms = <HT_TAPPING_TERM>;
+            quick-tap-ms = <HT_QUICK_TAP>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <KEYS_R KEYS_THUMBS>;
             hold-trigger-on-release;
+            display-name = "Mod-Tap Home-Mode Left";
         };
 
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <HM_QUICK_TAP>;
+            require-prior-idle-ms = <HT_PRIOR_IDLE>;
+            tapping-term-ms = <HT_TAPPING_TERM>;
+            quick-tap-ms = <HT_QUICK_TAP>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <KEYS_L KEYS_THUMBS>;
             hold-trigger-on-release;
+            display-name = "Mod-Tap Home-Mode Right";
         };
 
         morph_rgb_eff: morph_rgb_eff {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            display-name = "Underglow Next/Previous Effects";
         };
 
         morph_rgb_hui: morph_rgb_hui {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            display-name = "Underglow Hue Up/Down";
         };
 
         morph_rgb_sai: morph_rgb_sai {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            display-name = "Underglow Saturation Up/Down";
         };
 
         morph_rgb_bri: morph_rgb_bri {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            display-name = "Underglow Brightness Up/Down";
         };
     };
 
