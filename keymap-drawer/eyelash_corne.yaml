@@ -395,7 +395,7 @@ layers:
   System:
   - {type: held}
   - {t: Cmk-DH, h: toggle}
-  - ''
+  - Anti-Idle On
   - BT CLR ALL
   - ''
   - Boot
@@ -403,12 +403,12 @@ layers:
   - Boot
   - ''
   - BT CLR ALL
-  - ''
+  - Anti-Idle On
   - {t: Cmk-DH, h: toggle}
   - ''
   - {type: held}
   - ''
-  - ''
+  - Anti-Idle Off
   - BT CLR
   - ''
   - Reset
@@ -418,7 +418,7 @@ layers:
   - Reset
   - ''
   - BT CLR
-  - ''
+  - Anti-Idle Off
   - ''
   - ''
   - {type: held}
