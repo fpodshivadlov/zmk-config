@@ -1,0 +1,179 @@
+layout: {zmk_keyboard: charybdis}
+layers:
+  Default:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: Gui}
+    - {t: S, h: Alt}
+    - {t: D, h: Shift}
+    - {t: F, h: Ctrl}
+    - {t: G, h: AltGr}
+    - {t: H, h: AltGr}
+    - {t: J, h: Ctrl}
+    - {t: K, h: Shift}
+    - {t: L, h: Alt}
+    - {t: ;, h: Gui}
+  - [Z, X, C, V, B, N, M, ',', ., /]
+  - - {t: Esc, h: Media}
+    - {t: ␣, h: Nav}
+    - {t: ↹, h: Mouse}
+    - {t: ⏎, h: Symbol}
+    - {t: ⌫, h: Number}
+  Cmk-DH:
+  - [Q, W, F, P, B, J, L, U, Y, ;]
+  - - {t: A, h: Gui}
+    - {t: R, h: Alt}
+    - {t: S, h: Shift}
+    - {t: T, h: Ctrl}
+    - {t: G, h: AltGr}
+    - {t: M, h: AltGr}
+    - {t: N, h: Ctrl}
+    - {t: E, h: Shift}
+    - {t: I, h: Alt}
+    - {t: O, h: Gui}
+  - [Z, X, C, D, V, K, H, ',', ., /]
+  - - {t: ⁛, type: trans}
+    - {t: ⁛, type: trans}
+    - {t: ⁛, type: trans}
+    - {t: ⁛, type: trans}
+    - {t: ⁛, type: trans}
+  Symbol:
+  - ['{', '&', '*', (, '}', '', '', '', '', '']
+  - - '"'
+    - $
+    - '%'
+    - ^
+    - +
+    - {t: AltGr, h: 👆}
+    - {t: Ctrl, h: 👆}
+    - {t: Shift, h: 👆}
+    - {t: Alt, h: 👆}
+    - {t: Gui, h: 👆}
+  - ['~', '!', '@', '#', '|', '', '', '', '', '']
+  - - '>'
+    - )
+    - _
+    - {type: held}
+    - ''
+  Number:
+  - ['[', '7', '8', '9', ']', '', '', '', '', '']
+  - - ''''
+    - '4'
+    - '5'
+    - '6'
+    - '='
+    - {t: AltGr, h: 👆}
+    - {t: Ctrl, h: 👆}
+    - {t: Shift, h: 👆}
+    - {t: Alt, h: 👆}
+    - {t: Gui, h: 👆}
+  - ['`', '1', '2', '3', \, '', '', '', '', '']
+  - - .
+    - '0'
+    - '-'
+    - ''
+    - {type: held}
+  Func:
+  - [F12, F7, F8, F9, Print Scrn, '', '', '', '', '']
+  - - F11
+    - F4
+    - F5
+    - F6
+    - Scroll Lock
+    - {t: AltGr, h: 👆}
+    - {t: Ctrl, h: 👆}
+    - {t: Shift, h: 👆}
+    - {t: Alt, h: 👆}
+    - {t: Gui, h: 👆}
+  - [F10, F1, F2, F3, Pause Break, '', '', '', '', '']
+  - [APP, ␣, ↹, '', '']
+  Mouse:
+  - ['', '', '', '', '', '', '', '', '', '']
+  - - {t: Gui, h: 👆}
+    - {t: Alt, h: 👆}
+    - {t: Shift, h: 👆}
+    - {t: Ctrl, h: 👆}
+    - {t: AltGr, h: 👆}
+    - ''
+    - Mouse ←
+    - Mouse ↓
+    - Mouse ↑
+    - Mouse →
+  - ['', '', '', '', '', '', Scroll ←, Scroll ↓, Scroll ↑, Scroll →]
+  - - ''
+    - ''
+    - {type: held}
+    - Right Click
+    - Left Click
+  Nav:
+  - ['', '', '', '', '', '', '', '', '', '']
+  - - {t: Gui, h: 👆}
+    - {t: Alt, h: 👆}
+    - {t: Shift, h: 👆}
+    - {t: Ctrl, h: 👆}
+    - {t: AltGr, h: 👆}
+    - Caps Lock
+    - ←
+    - ↓
+    - ↑
+    - →
+  - ['', '', '', '', '', Insert, Home, Page ↓, Page ↑, End]
+  - - ''
+    - {type: held}
+    - ''
+    - ⏎
+    - BACKSPACE
+  Media:
+  - ['', '', '', '', '', RGB TOG, '', '', '', '']
+  - - {t: Gui, h: 👆}
+    - {t: Alt, h: 👆}
+    - {t: Shift, h: 👆}
+    - {t: Ctrl, h: 👆}
+    - {t: AltGr, h: 👆}
+    - EP TOG
+    - ⏮️
+    - 🔊-
+    - 🔊+
+    - ⏭️
+  - ['', '', '', '', '', OUT TOG, BT 1, BT 2, BT 3, BT 4]
+  - - {type: held}
+    - ''
+    - ''
+    - ⏹
+    - ⏯
+combos:
+- p: [2, 3]
+  k: '['
+  l: [Default, Cmk-DH]
+- p: [7, 8]
+  k: ']'
+  l: [Default, Cmk-DH]
+- p: [22, 23]
+  k: '{'
+  l: [Default, Cmk-DH]
+- p: [26, 27]
+  k: '}'
+  l: [Default, Cmk-DH]
+- p: [1, 2]
+  k: <
+  l: [Default, Cmk-DH]
+- p: [7, 8]
+  k: '>'
+  l: [Default, Cmk-DH]
+- p: [21, 22]
+  k: (
+  l: [Default, Cmk-DH]
+- p: [27, 28]
+  k: )
+  l: [Default, Cmk-DH]
+- p: [0, 1]
+  k: '`'
+  l: [Default, Cmk-DH]
+- p: [8, 9]
+  k: \
+  l: [Default, Cmk-DH]
+- p: [20, 21]
+  k: '~'
+  l: [Default, Cmk-DH]
+- p: [28, 29]
+  k: '|'
+  l: [Default, Cmk-DH]

@@ -1,12 +1,23 @@
 ---
 include:
-  - board: eyelash_corne_left
-    shield: nice_view
+  - board: nice_nano_v2
+    shield: charybdis_left
     snippet: studio-rpc-usb-uart
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=y
       -DCONFIG_ZMK_STUDIO_LOCKING=n
-  - board: eyelash_corne_right
-    shield: nice_view
-  - board: eyelash_corne_left
-    shield: settings_reset
+  # - board: nice_nano_v2
+  #   shield: charybdis_right
+  # - board: nice_nano_v2
+  #   shield: settings_reset
+
+  # - board: eyelash_corne_left
+  #   shield: nice_view
+  #   snippet: studio-rpc-usb-uart
+  #   cmake-args: >-
+  #     -DCONFIG_ZMK_STUDIO=y
+  #     -DCONFIG_ZMK_STUDIO_LOCKING=n
+  # - board: eyelash_corne_right
+  #   shield: nice_view
+  # - board: eyelash_corne_left
+  #   shield: settings_reset
