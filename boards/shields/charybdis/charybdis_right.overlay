@@ -3,12 +3,12 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include "charybdis.dtsi"
 
 &default_transform {
     col-offset = <5>;
-}; 
+};
 
 &kscan0 {
     col-gpios
@@ -17,7 +17,6 @@
         , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        
         ;
 };
 &right_encoder {
@@ -58,6 +57,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        scroll-layers = <8>;
+        snipe-layers = <9>;
+        automouse-layer = <10>;
     };
 };
 
