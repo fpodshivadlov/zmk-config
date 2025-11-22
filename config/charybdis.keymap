@@ -21,6 +21,10 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&sl {
+    release-after-ms = <2000>;
+};
+
 / {
     behaviors {
         lt: layer_tap {
