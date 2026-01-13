@@ -1,412 +1,446 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   Default:
-  - [1️⃣, Q, W, E, R, T, ↑, Y, U, I]
-  - - O
-    - P
-    - 2️⃣
-    - 3️⃣
-    - {t: A, h: Gui}
-    - {t: S, h: Alt}
-    - {t: D, h: Shift}
-    - {t: F, h: Ctrl}
-    - {t: G, h: AltGr}
-    - ←
-  - - ⏎
-    - →
-    - {t: H, h: AltGr}
-    - {t: J, h: Ctrl}
-    - {t: K, h: Shift}
-    - {t: L, h: Alt}
-    - {t: ;, h: Gui}
-    - 4️⃣
-    - 5️⃣
-    - Z
-  - [X, C, V, B, '', ↓, N, M, ',', .]
-  - - /
-    - 6️⃣
-    - {t: Esc, h: Media}
-    - {t: ␣, h: Nav}
-    - {t: ↹, h: Mouse}
-    - {t: ⏎, h: Symbol}
-    - {t: ⌫, h: Number}
-    - {t: ⌦, h: Func}
+  - 1️⃣
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - ↑
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - 2️⃣
+  - 3️⃣
+  - {t: A, h: Gui}
+  - {t: S, h: Alt}
+  - {t: D, h: Shift}
+  - {t: F, h: Ctrl}
+  - {t: G, h: AltGr}
+  - ←
+  - ⏎
+  - →
+  - {t: H, h: AltGr}
+  - {t: J, h: Ctrl}
+  - {t: K, h: Shift}
+  - {t: L, h: Alt}
+  - {t: ;, h: Gui}
+  - 4️⃣
+  - 5️⃣
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - ''
+  - ↓
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - 6️⃣
+  - {t: Esc, h: Media}
+  - {t: ␣, h: Nav}
+  - {t: ↹, h: Mouse}
+  - {t: ⏎, h: Symbol}
+  - {t: ⌫, h: Number}
+  - {t: ⌦, h: Func}
   Cmk-DH:
-  - - {t: ⁛, type: trans}
-    - Q
-    - W
-    - F
-    - P
-    - B
-    - {t: ⁛, type: trans}
-    - J
-    - L
-    - U
-  - - Y
-    - ;
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: A, h: Gui}
-    - {t: R, h: Alt}
-    - {t: S, h: Shift}
-    - {t: T, h: Ctrl}
-    - {t: G, h: AltGr}
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: M, h: AltGr}
-    - {t: N, h: Ctrl}
-    - {t: E, h: Shift}
-    - {t: I, h: Alt}
-    - {t: O, h: Gui}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - Z
-  - - X
-    - C
-    - D
-    - V
-    - ''
-    - {t: ⁛, type: trans}
-    - K
-    - H
-    - ','
-    - .
-  - - /
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - {t: ⁛, type: trans}
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: A, h: Gui}
+  - {t: R, h: Alt}
+  - {t: S, h: Shift}
+  - {t: T, h: Ctrl}
+  - {t: G, h: AltGr}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: M, h: AltGr}
+  - {t: N, h: Ctrl}
+  - {t: E, h: Shift}
+  - {t: I, h: Alt}
+  - {t: O, h: Gui}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - ''
+  - {t: ⁛, type: trans}
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
   Symbol:
-  - - {t: ⁛, type: trans}
-    - '{'
-    - '&'
-    - '*'
-    - (
-    - '}'
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - '"'
-    - $
-    - '%'
-    - ^
-    - +
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: AltGr, h: 👆}
-    - {t: Ctrl, h: 👆}
-    - {t: Shift, h: 👆}
-    - {t: Alt, h: 👆}
-    - {t: Gui, h: 👆}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - '~'
-  - - '!'
-    - '@'
-    - '#'
-    - '|'
-    - ''
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - {t: ⁛, type: trans}
-    - '>'
-    - )
-    - _
-    - {type: held}
-    - ''
-    - ''
+  - {t: ⁛, type: trans}
+  - '{'
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - '"'
+  - $
+  - '%'
+  - ^
+  - +
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: AltGr, h: 👆}
+  - {t: Ctrl, h: 👆}
+  - {t: Shift, h: 👆}
+  - {t: Alt, h: 👆}
+  - {t: Gui, h: 👆}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - ''
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - '>'
+  - )
+  - _
+  - {type: held}
+  - ''
+  - ''
   Number:
-  - - {t: ⁛, type: trans}
-    - '['
-    - '7'
-    - '8'
-    - '9'
-    - ']'
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - ''''
-    - '4'
-    - '5'
-    - '6'
-    - '='
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: AltGr, h: 👆}
-    - {t: Ctrl, h: 👆}
-    - {t: Shift, h: 👆}
-    - {t: Alt, h: 👆}
-    - {t: Gui, h: 👆}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - '`'
-  - - '1'
-    - '2'
-    - '3'
-    - \
-    - ''
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - {t: ⁛, type: trans}
-    - .
-    - '0'
-    - '-'
-    - ''
-    - {type: held}
-    - ''
+  - {t: ⁛, type: trans}
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - ''''
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: AltGr, h: 👆}
+  - {t: Ctrl, h: 👆}
+  - {t: Shift, h: 👆}
+  - {t: Alt, h: 👆}
+  - {t: Gui, h: 👆}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - .
+  - '0'
+  - '-'
+  - ''
+  - {type: held}
+  - ''
   Func:
-  - - {t: ⁛, type: trans}
-    - F12
-    - F7
-    - F8
-    - F9
-    - Print Scrn
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - F11
-    - F4
-    - F5
-    - F6
-    - Scroll Lock
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: AltGr, h: 👆}
-    - {t: Ctrl, h: 👆}
-    - {t: Shift, h: 👆}
-    - {t: Alt, h: 👆}
-    - {t: Gui, h: 👆}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - F10
-  - - F1
-    - F2
-    - F3
-    - Pause Break
-    - ''
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - {t: ⁛, type: trans}
-    - APP
-    - ␣
-    - ↹
-    - ''
-    - ''
-    - {type: held}
+  - {t: ⁛, type: trans}
+  - F12
+  - F7
+  - F8
+  - F9
+  - Print Scrn
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - F11
+  - F4
+  - F5
+  - F6
+  - Scroll Lock
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: AltGr, h: 👆}
+  - {t: Ctrl, h: 👆}
+  - {t: Shift, h: 👆}
+  - {t: Alt, h: 👆}
+  - {t: Gui, h: 👆}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - F10
+  - F1
+  - F2
+  - F3
+  - Pause Break
+  - ''
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - APP
+  - ␣
+  - ↹
+  - ''
+  - ''
+  - {type: held}
   Mouse:
-  - - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: Gui, h: 👆}
-    - {t: Alt, h: 👆}
-    - {t: Shift, h: 👆}
-    - {t: Ctrl, h: 👆}
-    - {t: AltGr, h: 👆}
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - ''
-    - Mouse ←
-    - Mouse ↓
-    - Mouse ↑
-    - Mouse →
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - ''
-    - Scroll ←
-    - Scroll ↓
-    - Scroll ↑
-  - - Scroll →
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - {type: held}
-    - Right Click
-    - Left Click
-    - Middle Click
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: Gui, h: 👆}
+  - {t: Alt, h: 👆}
+  - {t: Shift, h: 👆}
+  - {t: Ctrl, h: 👆}
+  - {t: AltGr, h: 👆}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - ''
+  - Mouse ←
+  - Mouse ↓
+  - Mouse ↑
+  - Mouse →
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - ''
+  - Scroll ←
+  - Scroll ↓
+  - Scroll ↑
+  - Scroll →
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - {type: held}
+  - Right Click
+  - Left Click
+  - Middle Click
   Nav:
-  - - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: Gui, h: 👆}
-    - {t: Alt, h: 👆}
-    - {t: Shift, h: 👆}
-    - {t: Ctrl, h: 👆}
-    - {t: AltGr, h: 👆}
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - Caps Lock
-    - ←
-    - ↓
-    - ↑
-    - →
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - Insert
-    - Home
-    - Page ↓
-    - Page ↑
-  - - End
-    - {t: ⁛, type: trans}
-    - ''
-    - {type: held}
-    - ''
-    - ⏎
-    - BACKSPACE
-    - DELETE
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: Gui, h: 👆}
+  - {t: Alt, h: 👆}
+  - {t: Shift, h: 👆}
+  - {t: Ctrl, h: 👆}
+  - {t: AltGr, h: 👆}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - Caps Lock
+  - ←
+  - ↓
+  - ↑
+  - →
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - Insert
+  - Home
+  - Page ↓
+  - Page ↑
+  - End
+  - {t: ⁛, type: trans}
+  - ''
+  - {type: held}
+  - ''
+  - ⏎
+  - BACKSPACE
+  - DELETE
   Media:
-  - - {t: ⁛, type: trans}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - RGB TOG
-    - {t: RGB EFF, s: RGB EFR}
-    - {t: RGB HUI, s: RGB HUD}
-  - - {t: RGB SAI, s: RGB SAD}
-    - {t: RGB BRI, s: RGB BRD}
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - {t: Gui, h: 👆}
-    - {t: Alt, h: 👆}
-    - {t: Shift, h: 👆}
-    - {t: Ctrl, h: 👆}
-    - {t: AltGr, h: 👆}
-    - {t: ⁛, type: trans}
-  - - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - EP TOG
-    - ⏮️
-    - 🔊-
-    - 🔊+
-    - ⏭️
-    - {t: ⁛, type: trans}
-    - {t: ⁛, type: trans}
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ⁛, type: trans}
-    - OUT TOG
-    - BT 1
-    - BT 2
-    - BT 3
-  - - BT 4
-    - {t: ⁛, type: trans}
-    - {type: held}
-    - ''
-    - ''
-    - ⏹
-    - ⏯
-    - 🔇
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - RGB TOG
+  - {t: RGB EFF, s: RGB EFR}
+  - {t: RGB HUI, s: RGB HUD}
+  - {t: RGB SAI, s: RGB SAD}
+  - {t: RGB BRI, s: RGB BRD}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: Gui, h: 👆}
+  - {t: Alt, h: 👆}
+  - {t: Shift, h: 👆}
+  - {t: Ctrl, h: 👆}
+  - {t: AltGr, h: 👆}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - EP TOG
+  - ⏮️
+  - 🔊-
+  - 🔊+
+  - ⏭️
+  - {t: ⁛, type: trans}
+  - {t: ⁛, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ⁛, type: trans}
+  - OUT TOG
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - {t: ⁛, type: trans}
+  - {type: held}
+  - ''
+  - ''
+  - ⏹
+  - ⏯
+  - 🔇
   System:
-  - - {type: held}
-    - {t: Cmk-DH, h: toggle}
-    - Anti-Idle On
-    - BT CLR ALL
-    - ''
-    - Boot
-    - ''
-    - Boot
-    - ''
-    - BT CLR ALL
-  - - Anti-Idle On
-    - {t: Cmk-DH, h: toggle}
-    - ''
-    - {type: held}
-    - ''
-    - Anti-Idle Off
-    - BT CLR
-    - ''
-    - Reset
-    - ''
-  - - ''
-    - ''
-    - Reset
-    - ''
-    - BT CLR
-    - Anti-Idle Off
-    - ''
-    - ''
-    - {type: held}
-    - ''
-  - ['', '', '', 🔓, '', '', 🔓, '', '', '']
-  - ['', '', '', '', '', '', '', '']
+  - {type: held}
+  - {t: Cmk-DH, h: toggle}
+  - ''
+  - BT CLR ALL
+  - ''
+  - Boot
+  - ''
+  - Boot
+  - ''
+  - BT CLR ALL
+  - ''
+  - {t: Cmk-DH, h: toggle}
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - Reset
+  - ''
+  - ''
+  - ''
+  - Reset
+  - ''
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - 🔓
+  - ''
+  - ''
+  - 🔓
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
 combos:
 - p: [0, 13, 28]
   k: {t: System, h: 👆}
