@@ -13,6 +13,10 @@ This repository contains configuration files, scripts, and resources for buildin
 ## Keymap Visualization
 The current keymap layout is visualized below (generated with [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)).
 
+### Charybdis Nano
+
+![Charybdis Nano Keymap](keymap-drawer/charybdis.svg)
+
 ### Eyelash Corne
 
 ![Eyelash Corne Keymap](keymap-drawer/eyelash_corne.svg)
