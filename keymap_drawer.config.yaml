@@ -166,6 +166,8 @@ parse_config:
       draw_separate: true
     system_right:
       draw_separate: true
+    utils:
+      draw_separate: true
     meh_7:
       align: left
     meh_8:
