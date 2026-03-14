@@ -362,24 +362,24 @@ layers:
   - {t: ⁛, type: trans}
   System:
   - {t: Cmk-DH, h: toggle, type: held}
-  - ''
+  - Anti-Idle On
   - {t: BT CLR ALL, type: held}
   - ''
   - {t: Boot, type: held}
   - Boot
   - ''
   - BT CLR ALL
-  - ''
+  - Anti-Idle On
   - {t: Cmk-DH, h: toggle}
   - ''
-  - ''
+  - Anti-Idle Off
   - BT CLR
   - ''
   - Reset
   - Reset
   - ''
   - BT CLR
-  - ''
+  - Anti-Idle Off
   - ''
   - ''
   - ''
