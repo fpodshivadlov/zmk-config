@@ -21,8 +21,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&sl { release-after-ms = <2000>; };
-
 / {
     behaviors {
         lt: layer_tap {
@@ -77,6 +75,28 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
+        };
+
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+
+            display-name = "Backspace-Delete";
+        };
+
+        lt_bspc_del: layer_tap_backspace_delete {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <HT_PRIOR_IDLE>;
+            tapping-term-ms = <HT_TAPPING_TERM>;
+            quick-tap-ms = <HT_QUICK_TAP>;
+            bindings = <&mo>, <&bspc_del>;
+
+            display-name = "Layer-Tap Backspace-Delete";
         };
     };
 
