@@ -100,6 +100,53 @@
         };
     };
 
+    macros {
+        to_en_qwerty: to_en_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N1)) &to 0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            display-name = "To EN QWERTY";
+        };
+
+        to_en_colemak: to_en_colemak {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N1)) &to 1>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            display-name = "To EN Colemak";
+        };
+
+        to_en_colemak_os: to_en_colemak_os {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N2)) &to 0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            display-name = "To EN Colemak (OS)";
+        };
+
+        to_ru_jcuken: to_ru_jcuken {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N3)) &to 0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            display-name = "To RU JCUKEN";
+        };
+
+        to_ru_rulemak_os: to_ru_rulemak_os {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N4)) &to 0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            display-name = "To RU Rulemak (OS)";
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
