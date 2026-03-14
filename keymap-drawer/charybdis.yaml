@@ -363,7 +363,7 @@ layers:
   System:
   - {t: Cmk-DH, h: toggle, type: held}
   - ''
-  - BT CLR ALL
+  - {t: BT CLR ALL, type: held}
   - ''
   - {t: Boot, type: held}
   - Boot
@@ -433,11 +433,11 @@ layers:
   - ''
   - ''
 combos:
-- p: [0, 4]
+- p: [0, 2, 4]
   k: {t: System, h: 👆}
   l: [Default, Cmk-DH]
   draw_separate: true
-- p: [5, 9]
+- p: [5, 7, 9]
   k: {t: System, h: 👆}
   l: [Default, Cmk-DH]
   draw_separate: true
