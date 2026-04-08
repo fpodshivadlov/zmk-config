@@ -397,17 +397,17 @@ layers:
   - ''
   - ''
   Utils:
-  - ''
-  - Meh+7
-  - Meh+8
-  - Meh+9
-  - {type: held}
   - {type: held}
   - Meh+7
   - Meh+8
   - Meh+9
   - ''
   - ''
+  - Meh+7
+  - Meh+8
+  - Meh+9
+  - ''
+  - {type: held}
   - Meh+4
   - Meh+5
   - Meh+6
@@ -441,7 +441,7 @@ combos:
   k: {t: System, h: 👆}
   l: [Default, Cmk-DH]
   draw_separate: true
-- p: [4, 5]
+- p: [0, 10]
   k: {t: Utils, h: 👆}
   l: [Default, Cmk-DH]
   draw_separate: true
@@ -483,4 +483,13 @@ combos:
   l: [Default, Cmk-DH]
 - p: [33, 34]
   k: ⌦
+  l: [Default, Cmk-DH]
+- p: [4, 5]
+  k: EN QWERTY
+  l: [Default, Cmk-DH]
+- p: [14, 15]
+  k: EN Colemak
+  l: [Default, Cmk-DH]
+- p: [24, 25]
+  k: RU JCUKEN
   l: [Default, Cmk-DH]
