@@ -52,6 +52,10 @@ parse_config:
     "&kp LS(LC(LA(N9)))": 9️⃣
     "&kp LS(LC(LA(N0)))": 0️⃣
 
+    "&layer_en_qwerty": EN QWERTY
+    "&layer_en_colemak": EN Colemak
+    "&layer_ru_jcuken": RU JCUKEN
+
   zmk_keycode_map:
     C_PP: ⏯
     C_STOP: ⏹
@@ -168,6 +172,10 @@ parse_config:
       draw_separate: true
     utils:
       draw_separate: true
+    utils_l:
+      align: left
+    utils_r:
+      align: right
     meh_7:
       align: left
     meh_8:

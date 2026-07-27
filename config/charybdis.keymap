@@ -21,6 +21,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#include "utils/ruen.dtsi"
+
 / {
     behaviors {
         lt: layer_tap {
@@ -85,7 +87,7 @@
             keep-mods = <(MOD_RSFT)>;
 
             display-name = "Backspace-Delete";
-        };
+    };
 
         lt_bspc_del: layer_tap_backspace_delete {
             compatible = "zmk,behavior-hold-tap";
@@ -117,7 +119,19 @@
 
         utils {
             bindings = <&sl 11>;
-            key-positions = <4 5>;
+            key-positions = <0 9>;
+            layers = <0 1>;
+        };
+
+        utils_l {
+            bindings = <&sl 11>;
+            key-positions = <0 10 20>;
+            layers = <0 1>;
+        };
+
+        utils_r {
+            bindings = <&sl 11>;
+            key-positions = <9 19 29>;
             layers = <0 1>;
         };
 
@@ -196,6 +210,24 @@
         key_del {
             bindings = <&kp DEL>;
             key-positions = <33 34>;
+            layers = <0 1>;
+        };
+
+        ruen_layer_en_qwerty {
+            bindings = <&layer_en_qwerty>;
+            key-positions = <4 5>;
+            layers = <0 1>;
+        };
+
+        ruen_layer_en_colemak {
+            bindings = <&layer_en_colemak>;
+            key-positions = <14 15>;
+            layers = <0 1>;
+        };
+
+        ruen_layer_ru_jcuken {
+            bindings = <&layer_ru_jcuken>;
+            key-positions = <24 25>;
             layers = <0 1>;
         };
     };
