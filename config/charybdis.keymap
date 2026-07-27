@@ -119,7 +119,19 @@
 
         utils {
             bindings = <&sl 11>;
-            key-positions = <0 10>;
+            key-positions = <0 9>;
+            layers = <0 1>;
+        };
+
+        utils_l {
+            bindings = <&sl 11>;
+            key-positions = <0 10 20>;
+            layers = <0 1>;
+        };
+
+        utils_r {
+            bindings = <&sl 11>;
+            key-positions = <9 19 29>;
             layers = <0 1>;
         };
 
